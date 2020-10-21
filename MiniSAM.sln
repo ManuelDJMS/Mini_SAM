@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MiniSAM", "MiniSAM.vbproj", "{46D36A9A-F380-4FCD-8C0E-17C41A12CCB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46D36A9A-F380-4FCD-8C0E-17C41A12CCB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D36A9A-F380-4FCD-8C0E-17C41A12CCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D36A9A-F380-4FCD-8C0E-17C41A12CCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D36A9A-F380-4FCD-8C0E-17C41A12CCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {283E58F1-B2C1-4207-976E-69F269A2B099}
+	EndGlobalSection
+EndGlobal
