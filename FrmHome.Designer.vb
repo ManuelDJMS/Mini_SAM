@@ -29,8 +29,11 @@ Partial Class FrmHome
         Me.btnMinimizar = New Guna.UI.WinForms.GunaControlBox()
         Me.btnCerrar = New Guna.UI.WinForms.GunaControlBox()
         Me.GunaDragControl1 = New Guna.UI.WinForms.GunaDragControl(Me.components)
-        Me.GunaAdvenceButton1 = New Guna.UI.WinForms.GunaAdvenceButton()
-        Me.GunaTextBox1 = New Guna.UI.WinForms.GunaTextBox()
+        Me.btnGenerar = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.txtNumCot = New Guna.UI.WinForms.GunaTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GunaAnimateWindow1 = New Guna.UI.WinForms.GunaAnimateWindow(Me.components)
         Me.PanelSuperior.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,7 +49,7 @@ Partial Class FrmHome
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
         Me.PanelSuperior.Name = "PanelSuperior"
-        Me.PanelSuperior.Size = New System.Drawing.Size(574, 33)
+        Me.PanelSuperior.Size = New System.Drawing.Size(418, 33)
         Me.PanelSuperior.TabIndex = 0
         '
         'btnMinimizar
@@ -59,7 +62,7 @@ Partial Class FrmHome
         Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMinimizar.IconColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(185, Byte), Integer))
         Me.btnMinimizar.IconSize = 15.0!
-        Me.btnMinimizar.Location = New System.Drawing.Point(507, -1)
+        Me.btnMinimizar.Location = New System.Drawing.Point(351, -1)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.OnHoverBackColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.btnMinimizar.OnHoverIconColor = System.Drawing.Color.Black
@@ -76,7 +79,7 @@ Partial Class FrmHome
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCerrar.IconColor = System.Drawing.Color.White
         Me.btnCerrar.IconSize = 15.0!
-        Me.btnCerrar.Location = New System.Drawing.Point(541, 0)
+        Me.btnCerrar.Location = New System.Drawing.Point(385, 0)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.OnHoverBackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.btnCerrar.OnHoverIconColor = System.Drawing.Color.White
@@ -88,65 +91,99 @@ Partial Class FrmHome
         '
         Me.GunaDragControl1.TargetControl = Me.PanelSuperior
         '
-        'GunaAdvenceButton1
+        'btnGenerar
         '
-        Me.GunaAdvenceButton1.AnimationHoverSpeed = 0.07!
-        Me.GunaAdvenceButton1.AnimationSpeed = 0.03!
-        Me.GunaAdvenceButton1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaAdvenceButton1.BorderColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray
-        Me.GunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White
-        Me.GunaAdvenceButton1.CheckedImage = CType(resources.GetObject("GunaAdvenceButton1.CheckedImage"), System.Drawing.Image)
-        Me.GunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray
-        Me.GunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaAdvenceButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GunaAdvenceButton1.ForeColor = System.Drawing.Color.White
-        Me.GunaAdvenceButton1.Image = CType(resources.GetObject("GunaAdvenceButton1.Image"), System.Drawing.Image)
-        Me.GunaAdvenceButton1.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(326, 52)
-        Me.GunaAdvenceButton1.Name = "GunaAdvenceButton1"
-        Me.GunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaAdvenceButton1.OnHoverImage = Nothing
-        Me.GunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.GunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.Size = New System.Drawing.Size(180, 42)
-        Me.GunaAdvenceButton1.TabIndex = 1
-        Me.GunaAdvenceButton1.Text = "GunaAdvenceButton1"
+        Me.btnGenerar.AnimationHoverSpeed = 0.07!
+        Me.btnGenerar.AnimationSpeed = 0.03!
+        Me.btnGenerar.BackColor = System.Drawing.Color.Transparent
+        Me.btnGenerar.BaseColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.btnGenerar.BorderColor = System.Drawing.Color.Black
+        Me.btnGenerar.CheckedBaseColor = System.Drawing.Color.Gray
+        Me.btnGenerar.CheckedBorderColor = System.Drawing.Color.Black
+        Me.btnGenerar.CheckedForeColor = System.Drawing.Color.White
+        Me.btnGenerar.CheckedImage = CType(resources.GetObject("btnGenerar.CheckedImage"), System.Drawing.Image)
+        Me.btnGenerar.CheckedLineColor = System.Drawing.Color.DimGray
+        Me.btnGenerar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnGenerar.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.btnGenerar.FocusedColor = System.Drawing.Color.Empty
+        Me.btnGenerar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnGenerar.ForeColor = System.Drawing.Color.White
+        Me.btnGenerar.Image = Global.MiniSAM.My.Resources.Resources.expediente
+        Me.btnGenerar.ImageSize = New System.Drawing.Size(20, 20)
+        Me.btnGenerar.LineColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.btnGenerar.Location = New System.Drawing.Point(287, 67)
+        Me.btnGenerar.Name = "btnGenerar"
+        Me.btnGenerar.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.btnGenerar.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.btnGenerar.OnHoverForeColor = System.Drawing.Color.White
+        Me.btnGenerar.OnHoverImage = Nothing
+        Me.btnGenerar.OnHoverLineColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.btnGenerar.OnPressedColor = System.Drawing.Color.Black
+        Me.btnGenerar.Radius = 6
+        Me.btnGenerar.Size = New System.Drawing.Size(115, 42)
+        Me.btnGenerar.TabIndex = 1
+        Me.btnGenerar.Text = "Generar PDF"
         '
-        'GunaTextBox1
+        'txtNumCot
         '
-        Me.GunaTextBox1.BaseColor = System.Drawing.Color.White
-        Me.GunaTextBox1.BorderColor = System.Drawing.Color.Silver
-        Me.GunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.GunaTextBox1.FocusedBaseColor = System.Drawing.Color.White
-        Me.GunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.GunaTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GunaTextBox1.Location = New System.Drawing.Point(147, 64)
-        Me.GunaTextBox1.Name = "GunaTextBox1"
-        Me.GunaTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.GunaTextBox1.Size = New System.Drawing.Size(160, 30)
-        Me.GunaTextBox1.TabIndex = 2
-        Me.GunaTextBox1.Text = "GunaTextBox1"
+        Me.txtNumCot.BackColor = System.Drawing.Color.Transparent
+        Me.txtNumCot.BaseColor = System.Drawing.Color.White
+        Me.txtNumCot.BorderColor = System.Drawing.Color.Silver
+        Me.txtNumCot.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNumCot.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtNumCot.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.txtNumCot.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtNumCot.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNumCot.Location = New System.Drawing.Point(105, 74)
+        Me.txtNumCot.Name = "txtNumCot"
+        Me.txtNumCot.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNumCot.Radius = 6
+        Me.txtNumCot.Size = New System.Drawing.Size(160, 30)
+        Me.txtNumCot.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Eras Demi ITC", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(18, 36)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(376, 28)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Generar PDF de las Cotizaciones"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(18, 78)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(81, 20)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Núm. Cot:"
+        '
+        'GunaAnimateWindow1
+        '
+        Me.GunaAnimateWindow1.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_BLEND
+        Me.GunaAnimateWindow1.Interval = 800
+        Me.GunaAnimateWindow1.TargetControl = Me
         '
         'FrmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(574, 172)
-        Me.Controls.Add(Me.GunaTextBox1)
-        Me.Controls.Add(Me.GunaAdvenceButton1)
+        Me.ClientSize = New System.Drawing.Size(418, 120)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtNumCot)
+        Me.Controls.Add(Me.btnGenerar)
         Me.Controls.Add(Me.PanelSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmHome"
         Me.PanelSuperior.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -155,6 +192,9 @@ Partial Class FrmHome
     Private WithEvents btnMinimizar As Guna.UI.WinForms.GunaControlBox
     Private WithEvents btnCerrar As Guna.UI.WinForms.GunaControlBox
     Friend WithEvents GunaDragControl1 As Guna.UI.WinForms.GunaDragControl
-    Friend WithEvents GunaTextBox1 As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaAdvenceButton1 As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents txtNumCot As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents btnGenerar As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents GunaAnimateWindow1 As Guna.UI.WinForms.GunaAnimateWindow
 End Class
