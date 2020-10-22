@@ -34,6 +34,7 @@ Partial Class FrmHome
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GunaAnimateWindow1 = New Guna.UI.WinForms.GunaAnimateWindow(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelSuperior.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +45,7 @@ Partial Class FrmHome
         'PanelSuperior
         '
         Me.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.PanelSuperior.Controls.Add(Me.Label3)
         Me.PanelSuperior.Controls.Add(Me.btnMinimizar)
         Me.PanelSuperior.Controls.Add(Me.btnCerrar)
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
@@ -167,12 +169,23 @@ Partial Class FrmHome
         Me.GunaAnimateWindow1.Interval = 800
         Me.GunaAnimateWindow1.TargetControl = Me
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(12, 9)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(41, 16)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "1.0.0.1"
+        '
         'FrmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(418, 120)
+        Me.ClientSize = New System.Drawing.Size(418, 117)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNumCot)
@@ -182,6 +195,7 @@ Partial Class FrmHome
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmHome"
         Me.PanelSuperior.ResumeLayout(False)
+        Me.PanelSuperior.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -197,4 +211,5 @@ Partial Class FrmHome
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GunaAnimateWindow1 As Guna.UI.WinForms.GunaAnimateWindow
+    Friend WithEvents Label3 As Label
 End Class
