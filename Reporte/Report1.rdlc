@@ -21,14 +21,7 @@
           <DataField>Numcot</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="CveEmpresa">
-          <DataField>CveEmpresa</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Cliente">
-          <DataField>Cliente</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
+     
         <Field Name="ClaveContacto">
           <DataField>ClaveContacto</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -68,10 +61,6 @@
         <Field Name="Observaciones">
           <DataField>Observaciones</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Elaboró Cot">
-          <DataField>Elaboró Cot</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="PartidaNo">
           <DataField>PartidaNo</DataField>
@@ -808,43 +797,14 @@
             <Top>3.92078cm</Top>
             <Left>0.23279cm</Left>
             <Height>1.2cm</Height>
-            <Width>17.76862cm</Width>
+            <Width>17.76864cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Cliente">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!Cliente.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Cliente</rd:DefaultName>
-            <Top>0.18188cm</Top>
-            <Left>1.96232cm</Left>
-            <Height>0.50728cm</Height>
-            <Width>6.20909cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
+          
           <Textbox Name="Textbox53">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -1081,66 +1041,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="desde">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!desde.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>desde</rd:DefaultName>
-            <Top>0.25244cm</Top>
-            <Left>14.30489cm</Left>
-            <Height>0.6cm</Height>
-            <Width>3.30821cm</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="hasta">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!hasta.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>hasta</rd:DefaultName>
-            <Top>0.99355cm</Top>
-            <Left>14.30489cm</Left>
-            <Height>0.6cm</Height>
-            <Width>3.30821cm</Width>
-            <ZIndex>11</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="referencia">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -1160,7 +1060,7 @@
             <Left>14.34017cm</Left>
             <Height>0.6cm</Height>
             <Width>3.30821cm</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1190,7 +1090,7 @@
             <Left>15.14838cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1220,7 +1120,7 @@
             <Left>1.96232cm</Left>
             <Height>0.6cm</Height>
             <Width>9.14228cm</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1250,7 +1150,7 @@
             <Left>1.96232cm</Left>
             <Height>0.6cm</Height>
             <Width>4.87429cm</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1280,7 +1180,7 @@
             <Left>7.013cm</Left>
             <Height>0.63528cm</Height>
             <Width>4.0916cm</Width>
-            <ZIndex>16</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1310,7 +1210,7 @@
             <Left>1.96232cm</Left>
             <Height>0.6cm</Height>
             <Width>6.20909cm</Width>
-            <ZIndex>17</ZIndex>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1346,7 +1246,7 @@
             <Left>8.34779cm</Left>
             <Height>0.472cm</Height>
             <Width>0.78071cm</Width>
-            <ZIndex>18</ZIndex>
+            <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1376,6 +1276,66 @@
             <Left>9.26961cm</Left>
             <Height>0.52944cm</Height>
             <Width>1.83499cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="fechaDesde">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!fechaDesde.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>fechaDesde</rd:DefaultName>
+            <Top>0.30988cm</Top>
+            <Left>14.26961cm</Left>
+            <Height>0.472cm</Height>
+            <Width>3.30645cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="fechaHasta">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!fechaHasta.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>fechaHasta</rd:DefaultName>
+            <Top>1.09938cm</Top>
+            <Left>14.26961cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.37877cm</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
@@ -1482,72 +1442,8 @@
                 </Border>
               </Style>
             </Line>
-            <Textbox Name="Textbox49">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Cliente:</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>#2f5597</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox46</rd:DefaultName>
-              <Top>1.89135cm</Top>
-              <Left>0.19576cm</Left>
-              <Height>0.472cm</Height>
-              <Width>1.55314cm</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="CveEmpresa">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!CveEmpresa.Value</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>CveEmpresa</rd:DefaultName>
-              <Top>1.89135cm</Top>
-              <Left>1.85946cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
+           
+            
             <Textbox Name="Textbox50">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -2028,14 +1924,8 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="cveEmpresa">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="cliente">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
+   
+    
     <ReportParameter Name="numCot">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -2072,11 +1962,11 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="desde">
+    <ReportParameter Name="fechaDesde">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="hasta">
+    <ReportParameter Name="fechaHasta">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -2098,16 +1988,6 @@
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>4</NumberOfRows>
       <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>cveEmpresa</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>cliente</ParameterName>
-        </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
@@ -2156,12 +2036,12 @@
         <CellDefinition>
           <ColumnIndex>3</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>desde</ParameterName>
+          <ParameterName>fechaDesde</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
-          <ParameterName>hasta</ParameterName>
+          <ParameterName>fechaHasta</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>

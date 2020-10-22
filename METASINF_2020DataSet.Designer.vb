@@ -2552,18 +2552,90 @@ Namespace METASINF_2020DataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCot", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaDesde", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaHasta", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@empresa", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cliente", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cveCont", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ciudad", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telefono", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ext", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@referencia", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@iniciales", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As METASINF_2020DataSet.cotizacionLIMSDataTable, ByVal numCot As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As METASINF_2020DataSet.cotizacionLIMSDataTable, ByVal numCot As Global.System.Nullable(Of Integer), ByVal fechaDesde As Global.System.Nullable(Of Date), ByVal fechaHasta As Global.System.Nullable(Of Date), ByVal empresa As String, ByVal cliente As String, ByVal cveCont As Global.System.Nullable(Of Integer), ByVal direccion As String, ByVal ciudad As String, ByVal estado As String, ByVal telefono As String, ByVal ext As String, ByVal referencia As String, ByVal iniciales As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (numCot.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(numCot.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (fechaDesde.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(fechaDesde.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (fechaHasta.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(fechaHasta.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (empresa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(empresa,String)
+            End If
+            If (cliente Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(cliente,String)
+            End If
+            If (cveCont.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(cveCont.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (direccion Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(direccion,String)
+            End If
+            If (ciudad Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(ciudad,String)
+            End If
+            If (estado Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(estado,String)
+            End If
+            If (telefono Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(telefono,String)
+            End If
+            If (ext Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(11).Value = CType(ext,String)
+            End If
+            If (referencia Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(12).Value = CType(referencia,String)
+            End If
+            If (iniciales Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(13).Value = CType(iniciales,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -2576,12 +2648,72 @@ Namespace METASINF_2020DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal numCot As Global.System.Nullable(Of Integer)) As METASINF_2020DataSet.cotizacionLIMSDataTable
+        Public Overloads Overridable Function GetData(ByVal numCot As Global.System.Nullable(Of Integer), ByVal fechaDesde As Global.System.Nullable(Of Date), ByVal fechaHasta As Global.System.Nullable(Of Date), ByVal empresa As String, ByVal cliente As String, ByVal cveCont As Global.System.Nullable(Of Integer), ByVal direccion As String, ByVal ciudad As String, ByVal estado As String, ByVal telefono As String, ByVal ext As String, ByVal referencia As String, ByVal iniciales As String) As METASINF_2020DataSet.cotizacionLIMSDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (numCot.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(numCot.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (fechaDesde.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(fechaDesde.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (fechaHasta.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(fechaHasta.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (empresa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(empresa,String)
+            End If
+            If (cliente Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(cliente,String)
+            End If
+            If (cveCont.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(cveCont.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (direccion Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(direccion,String)
+            End If
+            If (ciudad Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(ciudad,String)
+            End If
+            If (estado Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(estado,String)
+            End If
+            If (telefono Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(telefono,String)
+            End If
+            If (ext Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(11).Value = CType(ext,String)
+            End If
+            If (referencia Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(12).Value = CType(referencia,String)
+            End If
+            If (iniciales Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(13).Value = CType(iniciales,String)
             End If
             Dim dataTable As METASINF_2020DataSet.cotizacionLIMSDataTable = New METASINF_2020DataSet.cotizacionLIMSDataTable()
             Me.Adapter.Fill(dataTable)
